@@ -1,0 +1,43 @@
+@import "home";
+@import "config";
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+}
+
+.nav {
+  &__list {
+    width: 55%;
+    &-ul {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      list-style-type: none;
+      font-weight: 600;
+      a:link {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.logo {
+  background-color: transparent;
+  background-image: url(../dist/img/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: auto;
+  min-height: 38px;
+  min-width: 63px;
+  width: auto;
+}
