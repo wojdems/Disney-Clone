@@ -26,6 +26,34 @@ header {
       font-weight: 600;
       a:link {
         text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        .material-icons {
+          font-size: 20px;
+        }
+      }
+      .menu-nav__link {
+        position: relative;
+        p {
+          margin-left: 5px;
+          position: relative;
+        }
+        p::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 1.5px;
+          display: block;
+          margin-top: 5px;
+          background: #fff;
+          transition: width 0.2s ease;
+          border-radius: 0px 0px 4px 4px;
+        }
+        p:hover::after {
+          width: 100%;
+          background: #fff;
+        }
       }
     }
   }
