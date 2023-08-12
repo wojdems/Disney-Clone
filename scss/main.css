@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .home {
   background: linear-gradient(rgba(2, 9, 77, 0.1), rgba(2, 9, 77, 0.1)), url(../dist/img/background-blue.jpg) center top;
   height: 100vh;
@@ -120,19 +121,53 @@
 }
 .collection__recommendations .box .movies {
   display: flex;
-  flex-direction: row;
-  position: relative;
-  width: 100%;
-  gap: 30px;
+  transform: translateX(0%);
 }
 .collection__recommendations .box .movies .movie {
   background-color: red;
-  width: 100%;
 }
 .collection__recommendations .box .movies .movie img {
   height: auto;
-  display: block;
+  width: 25%;
+  aspect-ratio: 16/9;
+}
+.collection__recommendations .box .movies img {
+  width: 25%;
+  aspect-ratio: 16/9;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+.collection__recommendations .box .arrow {
+  background-color: rgba(255, 7, 7, 0.178);
+  height: 100%;
+  z-index: 10;
+  padding: 0.25rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+.collection__recommendations .box .arrow-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
   width: 100%;
+}
+.collection__recommendations .box .arrow-left:hover {
+  content: ‹;
+}
+.collection__recommendations .box .arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  width: 100%;
+}
+.collection__recommendations .box .arrow-right:hover {
+  content: ›;
+}
+.collection__recommendations .box .arrow:hover {
+  background-color: black;
+  cursor: pointer;
 }
 
 * {

@@ -133,21 +133,65 @@
 
       .movies {
         display: flex;
-        flex-direction: row;
-        position: relative;
-        width: 100%;
-        gap: 30px;
-
+        // flex-direction: row;
+        // position: relative;
+        // gap: 30px;
+        transform: translateX(00%);
         .movie {
           background-color: red;
 
+          img {
+            // height: auto;
+            // display: block;
+            height: auto;
+            width: 25%;
+            aspect-ratio: 16/9;
+          }
+        }
+
+        img {
+          width: 25%;
+          aspect-ratio: 16/9;
+          padding: 0.25rem;
+          // flex: 0 0 25%; //for different img sizes it might help
+          border-radius: 0.5rem;
+        }
+      }
+
+      .arrow {
+        background-color: rgba(255, 7, 7, 0.178);
+        height: 100%;
+        z-index: 10;
+        padding: 0.25rem;
+        border: none;
+        border-radius: 0.5rem;
+
+        &-left {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateX(-100%);
           width: 100%;
 
-          img {
-            height: auto;
-            display: block;
-            width: 100%;
+          &:hover {
+            content: \2039;
           }
+        }
+
+        &-right {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateX(100%);
+          width: 100%;
+          &:hover {
+            content: \203A;
+          }
+        }
+
+        &:hover {
+          background-color: black;
+          cursor: pointer;
         }
       }
     }
