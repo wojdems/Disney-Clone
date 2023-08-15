@@ -1,4 +1,14 @@
-@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: ghostwhite;
+}
+
+:export {
+  moviesPosition: 0%;
+}
+
 .home {
   background: linear-gradient(rgba(2, 9, 77, 0.1), rgba(2, 9, 77, 0.1)), url(../dist/img/background-blue.jpg) center top;
   height: 100vh;
@@ -69,7 +79,7 @@
 .collection__category__companies {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-top: 20px;
   position: relative;
@@ -102,7 +112,7 @@
 }
 .collection__category__companies--company:hover {
   width: calc(25% - 20px);
-  border: 2px white solid;
+  border: 2px ghostwhite solid;
   margin: 0px 0px 0px 0px;
   transition: 0.3s ease-in-out;
 }
@@ -132,49 +142,47 @@
   aspect-ratio: 16/9;
 }
 .collection__recommendations .box .movies img {
-  width: 25%;
+  min-width: 20%;
   aspect-ratio: 16/9;
-  padding: 0.25rem;
-  border-radius: 0.5rem;
+  padding-left: 0.7rem;
+  border-radius: 1rem;
 }
 .collection__recommendations .box .arrow {
-  background-color: rgba(255, 7, 7, 0.178);
+  background-color: rgba(0, 0, 0, 0.377);
   height: 100%;
   z-index: 10;
-  padding: 0.25rem;
   border: none;
   border-radius: 0.5rem;
+  width: 6rem;
+  font-size: 3rem;
+  cursor: pointer;
+  content-visibility: hidden;
 }
 .collection__recommendations .box .arrow-left {
   position: absolute;
   top: 0;
   left: 0;
   transform: translateX(-100%);
-  width: 100%;
-}
-.collection__recommendations .box .arrow-left:hover {
-  content: ‹;
 }
 .collection__recommendations .box .arrow-right {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   transform: translateX(100%);
-  width: 100%;
-}
-.collection__recommendations .box .arrow-right:hover {
-  content: ›;
 }
 .collection__recommendations .box .arrow:hover {
-  background-color: black;
-  cursor: pointer;
+  content-visibility: visible;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #f9f9f9;
+  color: ghostwhite;
+}
+
+:export {
+  moviesPosition: 0%;
 }
 
 main {

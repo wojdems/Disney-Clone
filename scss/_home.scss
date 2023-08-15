@@ -1,3 +1,5 @@
+@import "config";
+
 .home {
   background: linear-gradient(rgba(2, 9, 77, 0.1), rgba(2, 9, 77, 0.1)),
     url(../dist/img/background-blue.jpg) center top;
@@ -74,7 +76,7 @@
     &__companies {
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       margin-top: 20px;
       position: relative;
@@ -109,7 +111,7 @@
 
         &:hover {
           width: calc(25% - 20px);
-          border: 2px white solid;
+          border: 2px $text-color solid;
           margin: 0px 0px 0px 0px;
           transition: 0.3s ease-in-out;
           .hover-image {
@@ -133,10 +135,8 @@
 
       .movies {
         display: flex;
-        // flex-direction: row;
-        // position: relative;
-        // gap: 30px;
-        transform: translateX(00%);
+        transform: translateX($movies-position);
+
         .movie {
           background-color: red;
 
@@ -150,48 +150,41 @@
         }
 
         img {
-          width: 25%;
+          min-width: 20%;
           aspect-ratio: 16/9;
-          padding: 0.25rem;
+          padding-left: 0.7rem;
           // flex: 0 0 25%; //for different img sizes it might help
-          border-radius: 0.5rem;
+          border-radius: 1rem;
         }
       }
 
       .arrow {
-        background-color: rgba(255, 7, 7, 0.178);
+        background-color: rgba(0, 0, 0, 0.377);
         height: 100%;
         z-index: 10;
-        padding: 0.25rem;
         border: none;
         border-radius: 0.5rem;
+        width: 6rem;
+        font-size: 3rem;
+        cursor: pointer;
 
+        content-visibility: hidden;
         &-left {
           position: absolute;
           top: 0;
           left: 0;
           transform: translateX(-100%);
-          width: 100%;
-
-          &:hover {
-            content: \2039;
-          }
         }
 
         &-right {
           position: absolute;
           top: 0;
-          left: 0;
+          right: 0;
           transform: translateX(100%);
-          width: 100%;
-          &:hover {
-            content: \203A;
-          }
         }
 
         &:hover {
-          background-color: black;
-          cursor: pointer;
+          content-visibility: visible;
         }
       }
     }
