@@ -1,17 +1,14 @@
-// let $movie1 = document.getElementById(`movies-1`);
-// let $style = window.getComputedStyle($movie1);
-// let matrix = new WebKitCSSMatrix($style.transform);
-// console.log("translateX: ", matrix.m41);
-// let rightButton = document.getElementsByClassName(`arrow-right`);
+const buttonLeft = document.querySelectorAll(".arrow-left");
+const buttonRight = document.querySelectorAll(".arrow-right");
+const wrapper = document.querySelectorAll(".movies");
+const box = document.querySelectorAll(".box");
 
-import variables from "../scss";
+for (let i = 0; i < box.length; i++) {
+  buttonRight[i].addEventListener("click", () => {
+    wrapper[i].scrollLeft += box[i].offsetWidth;
+  });
 
-let $rightButton = document.getElementsByClassName("arrow-right");
-
-console.log($rightButton[0]);
-
-$rightButton[0].addEventListener("click", test);
-
-function test() {
-  console.log(variables.moviesPosition);
+  buttonLeft[i].addEventListener("click", () => {
+    wrapper[i].scrollLeft -= box[i].offsetWidth;
+  });
 }

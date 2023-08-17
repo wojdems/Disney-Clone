@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,12 +15,12 @@
 
 .home {
   background: linear-gradient(rgba(2, 9, 77, 0.1), rgba(2, 9, 77, 0.1)), url(../dist/img/background-blue.jpg) center top;
-  height: 100vh;
+  height: 10000px;
   width: auto;
   background-size: cover;
   justify-content: center;
   display: flex;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .collection {
@@ -131,7 +135,8 @@
 }
 .collection__recommendations .box .movies {
   display: flex;
-  transform: translateX(0%);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 .collection__recommendations .box .movies .movie {
   background-color: red;
@@ -154,7 +159,7 @@
   border: none;
   border-radius: 0.5rem;
   width: 6rem;
-  font-size: 3rem;
+  font-size: 4rem;
   cursor: pointer;
   content-visibility: hidden;
 }
@@ -172,6 +177,10 @@
 }
 .collection__recommendations .box .arrow:hover {
   content-visibility: visible;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
